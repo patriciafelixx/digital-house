@@ -1,16 +1,16 @@
 const express = require('express');
-const rotasProdutos = require('./routes/produtos');
+const rotasProdutos = require('./routes/rotasProdutos');
 
 let app = express();
+
+app.get('/', (req, res) => { res.send('Olá Mundo!') });
+app.get('/contato', (req, res) => { res.send('Página contatos!') });
+
 app.use('/produtos', rotasProdutos);
 
-app.listen(8000, () => { console.log('Servidor rodando com Express.') })
+// app.get('/produtos/:id?', (req, res) => { 
+//     let { id } = req.params; 
+//     res.send('Eu tenho um produto com o id ' + id); 
+// })
 
-app.get('/', (req, res) => { res.send('Olá Mundo!'); })
-
-app.get('/contato', (req, res) => { res.send(['Contato1', 'Contato2']); })
-
-app.get('/produtos/:id?', (req, res) => { 
-    let id = req.params.id; 
-    res.send('Escolheu o produto ' + id); 
-})
+app.listen(3000, () => { console.log('Servidor rodando na porta 3000.') });
