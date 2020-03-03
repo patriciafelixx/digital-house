@@ -1,4 +1,4 @@
-const pets = require('./pets.json');
+const pets = require('./pets.json.js');
 
 const darBanho = pet => {
     pet.servicos.push({
