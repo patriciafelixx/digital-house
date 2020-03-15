@@ -1,0 +1,14 @@
+.row div {
+    border: 2px dashed purple; 
+    height: 50px;
+}
+
+h1 {
+    color: purple;
+}
+
+/* sobrescrevendo uma regra do bootstrap */
+.btn-danger {
+    background-color: purple;
+    border-color: purple;
+}
