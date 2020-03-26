@@ -1,8 +1,49 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html {
+  font-family: 'Montserrat';
+  font-size: 20px;
 }
 
-a {
-  color: #00B7FF;
+body {
+  padding: 50px 100px;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  border-bottom: solid 2px #D54A66;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+ul li {
+  padding: 10px 20px;
+  margin-left: 20px;
+}
+
+li a {
+  padding: 10px 20px;
+  color: #D54A66;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #D54A66;
+  color: #fff;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: #777;
 }

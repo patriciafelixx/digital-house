@@ -1,0 +1,17 @@
+<%- include('./partials/head') %>
+
+<h1>Estudantes</h1>
+
+<% let estudantes = [
+        {nome: 'Hendy', curso: 'FS Blend', email: 'hendy@mail.com'},
+        {nome: 'Vinicius', curso: 'Mobile Android', email: 'vini@mail.com'},
+        {nome: 'Thomaz', curso: 'Mobile iOS', email: 'thom@mail.com'}
+    ] %>
+
+<ul>
+    <% for (let estudante of estudantes) { %>
+    <li><%= estudante.nome %> está no curso de <%= estudante.curso %> | contato: <%= estudante.email %></li>
+    <% } %>
+</ul>
+
+<%- include('./partials/foot') %>
