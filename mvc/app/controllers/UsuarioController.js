@@ -9,8 +9,9 @@ const UsuarioController = {
     },
     salvarForm: (req, res) => {
         let { nome, email, senha } = req.body;
+        let { files } = req;
         let senhaCript = bcrypt.hashSync(senha, 10);
-        let usuario = JSON.stringify({ nome, email, senha: senhaCript });
+        let usuario = JSON.stringify({ nome, email, senha: senhaCript, avatar: files[0].originalname });
 
         fs.writeFileSync(usuarioJson, usuario);
         res.send('Usuario cadastrado com sucesso!')
