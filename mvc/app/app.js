@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var produtosRouter = require('./routes/produtos');
+var usuariosRouter = require('./routes/usuarios');
 var methodOverride = require('method-override');
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/produtos', produtosRouter);
+app.use('/usuarios', usuariosRouter);
 
 app.use((req, res) => {
   res.status(404).render('not-found');
