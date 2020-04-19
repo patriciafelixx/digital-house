@@ -31,7 +31,7 @@ const ProdutoController = {
     listarProdutos: (req, res)  => {
         let produtos = fs.readFileSync(produtosJson, { encoding: 'utf-8'});
         produtos = JSON.parse(produtos);
-        res.render('listaProdutos', { listaProdutos: produtos });
+        res.render('listaProdutos', { listaProdutos: produtos, usuario: req.session.usuario });
     },
     deletarProduto: (req, res) => {
         let { id } = req.params;

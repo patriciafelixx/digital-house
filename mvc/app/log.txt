@@ -1,0 +1,4 @@
+O usuário acessou a url /
+O usuário acessou a url /usuarios/login
+O usuário acessou a url /produtos
+O usuário acessou a url /produtos/criar
