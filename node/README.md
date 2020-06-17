@@ -1,3 +1,32 @@
+## NODE JS
+
+**Package.json**
+```
+$ npm init -y
+```
+
+**Node modules**
+```
+npm install <module-name>
+<!-- Módulos nativos do Node: https://nodejs.org/api/ -->
+```
+
+**Dependencies E devDependencies**
+```
+npm install express --save
+npm install nodemon -D --save
+```
+```json
+"dependencies": {
+    "express": "~4.16.1"
+},
+"devDependencies" : {
+    "nodemon": "^2.0.2"
+}
+```
+
+## Módulo HTTP
+```javascript
 // 1. Exigir o módulo HTTP
 const http = require('http');
 
@@ -22,3 +51,27 @@ http.createServer((req, res) => {
             res.end('Você está no nosso Servidor!');
     }
 }).listen(3000);
+```
+
+## Exercícios
+
+```javascript
+// 01: Importando Módulos
+const moduloNativo = require('http');
+const moduloInstalado = require('./node_modules/axios');
+const moduloProprio = require('./minhaFuncao');
+
+
+// 02: Exportando Módulos
+let cachorro = {
+    nome: 'Scooby',
+    idade: 7,
+    gostaDeComer: true
+}
+module.exports = cachorro;
+
+
+// 03: Requisitando Módulos
+const cachorro = require ('./cachorro');
+console.log(`O cachorro se chama ${cachorro.nome} e tem ${cachorro.idade} anos`);
+```
